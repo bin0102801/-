@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF 링크 박스</title>
+<style>
+    /* AppleSDGothicNeoUL */
+    @font-face {
+        font-family: 'AppleSDGothicNeoUL';
+        src: url('https://raw.githubusercontent.com/bin0102801/-/main/MiConv.com__AppleSDGothicNeoUL.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    /* AppleSDGothicNeoSB */
+    @font-face {
+        font-family: 'AppleSDGothicNeoSB';
+        src: url('https://raw.githubusercontent.com/bin0102801/-/main/MiConv.com__AppleSDGothicNeoSB.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    /* 새 제목 폰트: iOS 포함 모든 환경 대응 */
+    @font-face {
+        font-family: 'HakgyoansimBareonbatangR';
+        src: 
+            url('https://raw.githubusercontent.com/bin0102801/-/main/MiConv.com__HakgyoansimBareonbatangR.woff2') format('woff2'),
+            url('https://raw.githubusercontent.com/bin0102801/-/main/MiConv.com__HakgyoansimBareonbatangR.woff') format('woff'),
+            url('https://raw.githubusercontent.com/bin0102801/-/main/HakgyoansimBareonbatangR.ttf') format('truetype'),
+            url('https://raw.githubusercontent.com/bin0102801/-/main/HakgyoansimBareonbatangR.otf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    :root {
+        --spacing: 15px;
+    }
+
+    body {
+        font-family: 'AppleSDGothicNeoUL', Arial, sans-serif !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100vh;
+        background: #fffeee;
+        margin: 0;
+        padding-top: 50px;
+        overflow: hidden;
+    }
+
+    h1 {
+        font-family: 'HakgyoansimBareonbatangR', serif !important;
+        font-size: 28px;
+        margin: 0 0 var(--spacing) 0;
+        color: #2b2c2c;
+        text-align: center;
+    }
+
+    .divider {
+        width: 90%;
+        max-width: 400px;
+        height: 2px;
+        background-color: #2b2c2c;
+        margin-bottom: -270px; 
+    }
+
+    .container {
+        width: 90%;
+        max-width: 400px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        justify-items: center;
+    }
+
+    .box {
+        width: 75px;
+        aspect-ratio: 1 / 1;
+        background: #ebe3cd;
+        border: 1.8px solid #2b2c2c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        font-weight: 1000px;
+        cursor: pointer;
+        transition: 0.2s;
+        text-decoration: none;
+        text-align: center;
+        color: #2b2c2c;
+        padding: 5px;
+        word-wrap: break-word;
+        font-family: 'AppleSDGothicNeoUL', Arial, sans-serif !important;
+    }
+
+    .box:hover {
+        background: #d0bba2;
+        color: white;
+        border: 4px solid white;
+    }
+
+    @media (max-width: 480px) {
+        .container { gap: 10px; }
+        .box { width: 35vw; font-size: 15px; padding: 4px; }
+        h1 { font-size: 22px; }
+        .divider { height: 2px; }
+    }
+</style>
+</head>
+<body>
+
+<h1>자연관찰자의 집</h1>
+<div class="divider"></div>
+
+<div class="container">
+    <a class="box" href="https://drive.google.com/file/d/1b5xrrgasHcc0CHR2DCUSlWwW1EYQZkqv/view?usp=drive_link" target="_blank">책꽂이 선반</a>
+    <a class="box" href="https://drive.google.com/file/d/1ilpFkuvD96NLJvBuQbq-sGPfzPPKfbNJ/view?usp=drive_link" target="_blank">침대</a>
+    <a class="box" href="https://drive.google.com/file/d/1P7ZuhLETu0fsAi3NfcS30px88Kmftr2u/view?usp=drive_link" target="_blank">협탁</a>
+    <a class="box" href="https://drive.google.com/file/d/19rElpmTC9X8SIlP2VyLfDepaf39l_nn0/view?usp=drive_link" target="_blank">고양이집</a>
+    <a class="box" href="https://drive.google.com/file/d/1bkQmBRPNc-Wn8XO2bRZESasuVKZRCeSf/view?usp=drive_link">의자</a>
+    <a class="box" href="https://drive.google.com/file/d/15T3hLkhLMxipRQZ6ibdMq7SGOMbmhpxc/view?usp=drive_link">작업 공간</a>
+</div>
+
+</body>
+</html>
